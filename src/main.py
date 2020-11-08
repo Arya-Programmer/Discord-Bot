@@ -184,4 +184,4 @@ except Exception as e:
 
 
 
-client.run('NzY2MjcxMzA5NzkzMzI5MjA1.X4g7xA.AvR7uMxgl79HSHeq4yozwx111Dk')
+client.run("TOKEN")
