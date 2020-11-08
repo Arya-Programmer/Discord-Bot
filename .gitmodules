@@ -1,0 +1,3 @@
+[submodule "Discord-Bot"]
+	path = Discord-Bot
+	url = https://github.com/Arya-Programmer/Discord-Bot.git
