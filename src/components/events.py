@@ -8,7 +8,7 @@ class Events(commands.Cog):
     @commands.Cog.listener()
     async def on_member_update(self, message, before, after):
         n = before.nick
-        if after.nick not in ["arya", "4ry4", "ary4", "4rya"]:
+        if after.nick in ["arya", "4ry4", "ary4", "4rya"]:
             await message.channel.send("don't change your name to master, DESUU~")
         else:
             await message.channel.send(f"your nickname was changed from {before.nick} to {after.nick}")

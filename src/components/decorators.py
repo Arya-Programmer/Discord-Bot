@@ -3,7 +3,7 @@ from discord.ext import commands
 import sqlite3
 
 
-class Example(commands.Cog):
+class decorations(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -31,7 +31,7 @@ class Example(commands.Cog):
     @commands.command(aliases=['fuck'])
     @commands.Cog.listener()
     async def fuck_player(self, ctx, player):
-        conn = sqlite3.connect('words.sqlite')
+        conn = sqlite3.connect('Words.sqlite')
         # making a cursor
         cursor = conn.cursor()
         cursor.execute("SELECT word FROM BANNED")
@@ -82,6 +82,7 @@ class Example(commands.Cog):
 
     @commands.command()
     @commands.Cog.listener()
+    @commands.has_permissions(administrator=True)
     async def repeat(self, ctx, word, second=5, times=2):
         word = word.replace('-', ' ')
         for i in range(times):
@@ -92,4 +93,4 @@ class Example(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Example(client))
+    client.add_cog(decorations(client))
