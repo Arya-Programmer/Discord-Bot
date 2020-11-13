@@ -3,7 +3,6 @@ Scripts/
 Include/
 *.whl
 .idea/
-asuna-disc-bot/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
